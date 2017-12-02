@@ -1,0 +1,2 @@
+language: csharp
+solution: ./2017/AdventSolutions.sln
