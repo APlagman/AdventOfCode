@@ -2,7 +2,7 @@
 
 namespace AdventSolutions
 {
-    abstract class AdventDay
+    public abstract class AdventDay
     {
         public void Run()
         {

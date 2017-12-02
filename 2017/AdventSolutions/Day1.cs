@@ -4,7 +4,8 @@ using System.IO;
 
 namespace AdventSolutions
 {
-    class Day1 : AdventDay
+    // http://adventofcode.com/2017/day/1
+    public class Day1 : AdventDay
     {
         protected override int Day => 1;
 
@@ -21,32 +22,29 @@ namespace AdventSolutions
             int lineNum = 0;
             foreach (string line in input)
             {
-                int sum = 0;
-                for (int pos = 0; pos < line.Length; ++pos)
-                {
-                    if (line[pos] == line[(pos + 1) % line.Length])
-                    {
-                        sum += Int32.Parse(line[pos].ToString());
-                    }
-                }
-                Console.WriteLine($"Line {lineNum}: {sum}");
+                Console.WriteLine($"Line {lineNum}: {SumIdenticalDigits(line, 1)}");
                 lineNum++;
             }
             Console.WriteLine("Answer to Part 2:");
             lineNum = 0;
             foreach (string line in input)
             {
-                int sum = 0;
-                for (int pos = 0; pos < line.Length; ++pos)
-                {
-                    if (line[pos] == line[(pos + (line.Length / 2)) % line.Length])
-                    {
-                        sum += Int32.Parse(line[pos].ToString());
-                    }
-                }
-                Console.WriteLine($"Line {lineNum}: {sum}");
+                Console.WriteLine($"Line {lineNum}: {SumIdenticalDigits(line, line.Length / 2)}");
                 lineNum++;
             }
+        }
+
+        public static int SumIdenticalDigits(string line, int offset)
+        {
+            int sum = 0;
+            for (int pos = 0; pos < line.Length; ++pos)
+            {
+                if (line[pos] == line[(pos + offset) % line.Length])
+                {
+                    sum += Int32.Parse(line[pos].ToString());
+                }
+            }
+            return sum;
         }
     }
 }

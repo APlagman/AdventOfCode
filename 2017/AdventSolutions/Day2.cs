@@ -1,6 +1,6 @@
 ﻿namespace AdventSolutions
 {
-    class Day2 : AdventDay
+    public class Day2 : AdventDay
     {
         protected override int Day => 2;
 
