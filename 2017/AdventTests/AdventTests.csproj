@@ -51,6 +51,7 @@
     <Compile Include="Day1Tests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Day2Tests.cs" />
+    <Compile Include="Day3Tests.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
