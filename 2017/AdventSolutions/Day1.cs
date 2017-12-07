@@ -11,13 +11,7 @@ namespace AdventSolutions
 
         protected override void RunImpl()
         {
-            string inputFile;
-            do
-            {
-                Console.WriteLine("Provide input file:");
-                inputFile = Console.ReadLine();
-            } while (!File.Exists(inputFile));
-            IEnumerable<string> input = File.ReadLines(inputFile);
+            var input = File.ReadLines(FileUtils.PromptForExistingFilePath());
             Console.WriteLine("Answer to Part 1:");
             int lineNum = 0;
             foreach (string line in input)

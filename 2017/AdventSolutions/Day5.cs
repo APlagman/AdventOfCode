@@ -11,15 +11,7 @@ namespace AdventSolutions
         protected override void RunImpl()
         {
             // http://adventofcode.com/2017/day/5
-            string inputFile;
-            do
-            {
-                Console.WriteLine("Provide input file:");
-                inputFile = Console.ReadLine();
-            } while (!File.Exists(inputFile));
-            IEnumerable<string> input = File.ReadLines(inputFile);
-
-            Console.WriteLine("Answer to Part 1:");
+            var input = File.ReadLines(FileUtils.PromptForExistingFilePath()); Console.WriteLine("Answer to Part 1:");
             var offsets = new List<int>();
             foreach (string line in input)
             {
