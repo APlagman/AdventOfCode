@@ -8,18 +8,11 @@ namespace AdventSolutions
 {
     public class Day2 : AdventDay
     {
-        protected override int Day => 2;
+        protected override int Number => 2;
 
         protected override void RunImpl()
         {
-            string inputFile;
-            do
-            {
-                Console.WriteLine("Provide input file:");
-                inputFile = Console.ReadLine();
-            } while (!File.Exists(inputFile));
-            IEnumerable<string> input = File.ReadLines(inputFile);
-
+            var input = File.ReadLines(FileUtils.PromptForExistingFilePath());
             Console.WriteLine("Answer to Part 1:");
             int checksum = 0;
             int lineNum = 0;

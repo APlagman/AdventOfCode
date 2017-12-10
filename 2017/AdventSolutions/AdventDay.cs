@@ -6,12 +6,12 @@ namespace AdventSolutions
     {
         public void Run()
         {
-            Console.WriteLine($"Running Day {Day}{Environment.NewLine}");
+            Console.WriteLine($"Running Day {Number}{Environment.NewLine}");
             RunImpl();
             Console.WriteLine($"{Environment.NewLine}Press Enter to continue...");
             Console.ReadLine();
         }
         protected abstract void RunImpl();
-        protected abstract int Day { get; }
+        protected abstract int Number { get; }
     }
 }
