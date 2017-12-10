@@ -9,7 +9,7 @@ namespace AdventSolutions
 {
     class Day7 : AdventDay
     {
-        protected override int Day => 7;
+        protected override int Number => 7;
 
         protected override void RunImpl()
         {

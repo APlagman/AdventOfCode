@@ -7,7 +7,7 @@ namespace AdventSolutions
     // http://adventofcode.com/2017/day/1
     public class Day1 : AdventDay
     {
-        protected override int Day => 1;
+        protected override int Number => 1;
 
         protected override void RunImpl()
         {
